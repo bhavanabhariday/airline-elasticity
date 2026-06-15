@@ -10,10 +10,10 @@
 [View the Interactive Power BI Dashboard](https://app.powerbi.com/reportEmbed?reportId=9381f527-c42c-4120-86bd-bbdd0b5264df&autoAuth=true&ctid=a8eec281-aaa3-4dae-ac9b-9a398b9215e7)
 
 ### Executive Summary
-![Executive Summary](images/executive_summary.png)
+![Executive Summary](images/Executive_summary.png)
 
 ### Route Deep Dive
-![Route Deep Dive](images/route_deep_dive.png)
+![Route Deep Dive](images/Route_deep_dive.png)
 
 ---
 
