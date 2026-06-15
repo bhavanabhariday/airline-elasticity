@@ -1,11 +1,11 @@
-# ✈️ Airline Fare Elasticity & Revenue Opportunity Model
+# Airline Fare Elasticity & Revenue Opportunity Model
 
 > **"Are we charging the right price on the right route — or are we leaving millions on the table?"**
 > This project answers that question using real government flight data.
 
 ---
 
-## 🤔 What Is This Project, In Plain English?
+## What Is This Project, In Plain English?
 
 Imagine you're a Revenue Manager at an airline. Every day you're making calls like:
 
@@ -19,7 +19,7 @@ Right now, most of those decisions rely on gut feel, experience, or basic compet
 
 ---
 
-## 💡 The Core Idea: Price Sensitivity
+## The Core Idea: Price Sensitivity
 
 Not all passengers are equal. Consider two types:
 
@@ -35,11 +35,11 @@ This project measures exactly *how* sensitive each route is — and turns that i
 
 ---
 
-## 🎯 What We Found
+## What We Found
 
 We analyzed **125 U.S. routes** across **11 quarters (2022–2024)** — that's over **120 million real ticket records**.
 
-### Routes Where You Can Raise Fares 💰
+### Routes Where You Can Raise Fares 
 
 These routes have **captive passengers** — people who will fly regardless of price because there are few or no alternatives:
 
@@ -49,9 +49,9 @@ These routes have **captive passengers** — people who will fly regardless of p
 | **HNL → IAH** (Honolulu to Houston) | Long-haul, limited options | ~$76,000 |
 | **ANC → DEN** (Anchorage to Denver) | Remote Alaska market | ~$23,000 |
 
-> 💡 **Fun Fact:** The Honolulu–Kona route showed that passengers barely flinch at higher fares. Even a 30% fare increase only reduces demand by about 8%. That's a goldmine for pricing teams.
+> **Fun Fact:** The Honolulu–Kona route showed that passengers barely flinch at higher fares. Even a 30% fare increase only reduces demand by about 8%. That's a goldmine for pricing teams.
 
-### Routes Where a Fare Hike Would Backfire ⚠️
+### Routes Where a Fare Hike Would Backfire 
 
 These routes have **budget airline competition** — passengers are actively price-shopping:
 
@@ -61,11 +61,11 @@ These routes have **budget airline competition** — passengers are actively pri
 | **CLT → SJU** (Charlotte to San Juan) | Heavy ULCC presence | -1.7 |
 | **HNL → LAX** (Honolulu to LA) | Many carrier options | -1.3 |
 
-> ⚠️ On ANC–ORD, a 10% fare increase would drop passenger demand by **43%**. You'd end up with fewer passengers AND less revenue. Classic pricing trap.
+> On ANC–ORD, a 10% fare increase would drop passenger demand by **43%**. You'd end up with fewer passengers AND less revenue. Classic pricing trap.
 
 ---
 
-## 📊 How To Read The Key Number: Elasticity
+## How To Read The Key Number: Elasticity
 
 The **elasticity score** is the single most important output of this model. Here's how to read it:
 
@@ -80,11 +80,11 @@ Elasticity = -4.3  →  Do NOT raise fares. You'll lose 43 passengers for every 
 
 ---
 
-## 🏆 The ULCC Effect
+## The ULCC Effect
 
 **ULCC = Ultra-Low-Cost Carrier** (think Spirit, Frontier, Allegiant — the airlines that charge you for a carry-on and a glass of water).
 
-> 💡 **Fun Fact:** When Spirit enters a route, it doesn't just take market share — it *trains* passengers to shop on price. Even passengers who don't fly Spirit start expecting lower fares. Our model captured this effect: routes with heavy ULCC competition are significantly more price-elastic than routes without.
+> **Fun Fact:** When Spirit enters a route, it doesn't just take market share — it *trains* passengers to shop on price. Even passengers who don't fly Spirit start expecting lower fares. Our model captured this effect: routes with heavy ULCC competition are significantly more price-elastic than routes without.
 
 **What this means for pricing strategy:**
 - On ULCC-heavy routes → Don't try to out-price them. Compete on product.
@@ -92,7 +92,7 @@ Elasticity = -4.3  →  Do NOT raise fares. You'll lose 43 passengers for every 
 
 ---
 
-## 📁 What's In This Repository
+## What's In This Repository
 
 | Folder/File | What It Contains | Who Should Look At It |
 |---|---|---|
@@ -105,7 +105,7 @@ Elasticity = -4.3  →  Do NOT raise fares. You'll lose 43 passengers for every 
 
 ---
 
-## 📈 The Charts
+## The Charts
 
 ### Elasticity Distribution by Fare Class
 Shows how price-sensitive passengers are across Coach, Discounted Coach, and Business class.
@@ -121,22 +121,22 @@ A scatter plot showing how more budget-airline competition = more price-sensitiv
 
 ---
 
-## 🔍 Where Does The Data Come From?
+## Where Does The Data Come From?
 
 **Source:** U.S. Department of Transportation — DB1B Dataset
 
 This is **publicly available government data** that tracks every domestic airline ticket sold in the United States. It's not estimated or sampled — it's the actual transaction records reported by airlines to the federal government.
 
-- 📅 **Time period:** 2022 Q1 through 2024 Q3 (11 quarters)
-- 🎫 **Records analyzed:** ~120 million individual ticket records
-- 🗺️ **Routes covered:** Top 125 U.S. domestic routes by passenger volume
-- ✈️ **Fare classes:** Coach Full, Coach Discounted, Business
+- **Time period:** 2022 Q1 through 2024 Q3 (11 quarters)
+- **Records analyzed:** ~120 million individual ticket records
+- **Routes covered:** Top 125 U.S. domestic routes by passenger volume
+- **Fare classes:** Coach Full, Coach Discounted, Business
 
-> 💡 **Fun Fact:** The DOT has been collecting this data since the 1990s. It's one of the most detailed public datasets in any industry in the world — and most airlines already have access to it but don't use it to its full potential.
+> **Fun Fact:** The DOT has been collecting this data since the 1990s. It's one of the most detailed public datasets in any industry in the world — and most airlines already have access to it but don't use it to its full potential.
 
 ---
 
-## 🛠️ How It Was Built (For The Curious)
+## How It Was Built (For The Curious)
 
 No jargon, we promise:
 
@@ -148,7 +148,7 @@ No jargon, we promise:
 
 ---
 
-## 💼 For Revenue Managers: How To Use The Outputs
+## For Revenue Managers: How To Use The Outputs
 
 **Step 1:** Open `data/output/revenue_opportunities.csv`
 
@@ -170,7 +170,7 @@ No jargon, we promise:
 
 ---
 
-## 🌟 Bottom Line
+## Bottom Line
 
 This model turns 120 million data points into one clear answer for every route: **raise, hold, or lower.**
 
