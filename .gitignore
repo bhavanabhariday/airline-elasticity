@@ -1,0 +1,6 @@
+# Gitignore for large data files
+data/raw/
+data/processed/
+*.zip
+__pycache__/
+.DS_Store
