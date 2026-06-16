@@ -154,7 +154,7 @@ No jargon, we promise:
 
 ---
 
-## For Revenue Managers: How To Use The Outputs
+## From Model to Pricing Decision
 
 **Step 1:** Open `data/output/revenue_opportunities.csv`
 
