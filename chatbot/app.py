@@ -29,11 +29,15 @@ def build_context():
     ].to_string(index=False)
 
     top_elastic = elasticity_df[elasticity_df["elasticity_sig"] == True].nsmallest(10, "elasticity")[
-        ["route", "fare_tier", "elasticity", "demand_type"]
+        ["route", "fare_tier", "elasticity", "demand_type", "ulcc_share"]
     ].to_string(index=False)
 
     top_inelastic = elasticity_df[elasticity_df["elasticity_sig"] == True].nlargest(10, "elasticity")[
-        ["route", "fare_tier", "elasticity", "demand_type"]
+        ["route", "fare_tier", "elasticity", "demand_type", "ulcc_share"]
+    ].to_string(index=False)
+
+    top_ulcc = elasticity_df[elasticity_df["elasticity_sig"] == True].nlargest(10, "ulcc_share")[
+        ["route", "fare_tier", "ulcc_share", "elasticity", "demand_type"]
     ].to_string(index=False)
 
     return f"""
@@ -46,22 +50,30 @@ KEY FACTS:
 - Fare tiers: Coach Full, Coach Discounted, Business
 - Elasticity threshold: -1.0 (above = inelastic/raise fare, below = elastic/hold or lower)
 - ULCC = Ultra-Low-Cost Carriers (Spirit, Frontier, Allegiant)
+- ulcc_share = fraction of passengers on that route carried by ULCCs (0 to 1)
+- Higher ulcc_share = more ULCC competition = passengers more price sensitive
 
 TOP ROUTES TO RAISE FARE:
 {raise_fare}
 
-MOST ELASTIC ROUTES (do NOT raise fares):
+MOST ELASTIC ROUTES (do NOT raise fares — below -1.0):
 {top_elastic}
 
-MOST INELASTIC ROUTES (safe to raise fares):
+MOST INELASTIC ROUTES (safe to raise fares — above -1.0):
 {top_inelastic}
+
+ROUTES WITH MOST ULCC COMPETITION (highest ulcc_share):
+{top_ulcc}
 
 RULES FOR ANSWERING:
 - Be concise and direct
+- Elasticity above -1.0 (e.g. -0.3, -0.5) = inelastic = RAISE fares
+- Elasticity below -1.0 (e.g. -1.5, -4.3) = elastic = do NOT raise fares
 - Always mention the elasticity score when discussing a specific route
 - Translate elasticity into plain English (e.g. "a 10% fare increase would drop demand by X%")
+- Always mention ulcc_share when asked about ULCC competition
 - If asked about a route not in the data, say so clearly
-- Format numbers cleanly (e.g. $577K, -4.3)
+- Format numbers cleanly (e.g. $577K, -4.3, 45% ULCC share)
 """
 
 # ── Groq client ───────────────────────────────────────────────────────────────
