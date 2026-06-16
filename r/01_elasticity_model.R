@@ -214,7 +214,17 @@ p1 <- route_elasticities %>%
     fill     = "Fare Tier"
   ) +
   theme_minimal(base_size = 12) +
-  theme(legend.position = "bottom")
+  theme(
+    legend.position = "bottom",
+    plot.background  = element_rect(fill = "#1a1a2e", color = NA),
+    panel.background = element_rect(fill = "#1a1a2e", color = NA),
+    text             = element_text(color = "white"),
+    axis.text        = element_text(color = "white"),
+    legend.background = element_rect(fill = "#1a1a2e"),
+    legend.text      = element_text(color = "white"),
+    legend.title     = element_text(color = "white"),
+    strip.text       = element_text(color = "white")
+  )
 
 ggsave(file.path(PLOT_DIR, "elasticity_distribution.png"), p1, width = 12, height = 7)
 
@@ -234,7 +244,16 @@ p2 <- route_elasticities %>%
     color    = "Fare Tier"
   ) +
   theme_minimal(base_size = 12) +
-  theme(legend.position = "right")
+  theme(
+    legend.position  = "right",
+    plot.background  = element_rect(fill = "#1a1a2e", color = NA),
+    panel.background = element_rect(fill = "#1a1a2e", color = NA),
+    text             = element_text(color = "white"),
+    axis.text        = element_text(color = "white"),
+    legend.background = element_rect(fill = "#1a1a2e"),
+    legend.text      = element_text(color = "white"),
+    legend.title     = element_text(color = "white")
+  )
 
 ggsave(file.path(PLOT_DIR, "elasticity_vs_ulcc.png"), p2, width = 10, height = 7)
 

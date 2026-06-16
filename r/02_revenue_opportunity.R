@@ -178,7 +178,16 @@ p3 <- opportunity_summary %>%
     x = "Fare Tier", y = "Revenue Opportunity ($M)", fill = "Action"
   ) +
   scale_fill_manual(values = c("Raise Fare" = "#2166ac", "Lower Fare" = "#d73027", "Hold" = "#999999")) +
-  theme_minimal(base_size = 12)
+  theme_minimal(base_size = 12) +
+  theme(
+    plot.background  = element_rect(fill = "#1a1a2e", color = NA),
+    panel.background = element_rect(fill = "#1a1a2e", color = NA),
+    text             = element_text(color = "white"),
+    axis.text        = element_text(color = "white"),
+    legend.background = element_rect(fill = "#1a1a2e"),
+    legend.text      = element_text(color = "white"),
+    legend.title     = element_text(color = "white")
+  )
 
 ggsave(file.path(PLOT_DIR, "revenue_opportunity_by_tier.png"), p3, width = 10, height = 6)
 
@@ -218,7 +227,16 @@ p5 <- opportunity_summary %>%
     color    = "Fare Tier",
     size     = "Current Rev ($K)"
   ) +
-  theme_minimal(base_size = 12)
+  theme_minimal(base_size = 12) +
+  theme(
+    plot.background  = element_rect(fill = "#1a1a2e", color = NA),
+    panel.background = element_rect(fill = "#1a1a2e", color = NA),
+    text             = element_text(color = "white"),
+    axis.text        = element_text(color = "white"),
+    legend.background = element_rect(fill = "#1a1a2e"),
+    legend.text      = element_text(color = "white"),
+    legend.title     = element_text(color = "white")
+  )
 
 ggsave(file.path(PLOT_DIR, "elasticity_vs_revenue_delta.png"), p5, width = 11, height = 7)
 
