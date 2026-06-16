@@ -10,11 +10,13 @@ st.set_page_config(
 )
 
 # ── Load data ─────────────────────────────────────────────────────────────────
+BASE_URL = "https://raw.githubusercontent.com/bhavanabhariday/airline-elasticity/main/data/output"
+
 @st.cache_data
 def load_data():
-    elasticity  = pd.read_csv("../data/output/elasticity_estimates.csv")
-    revenue     = pd.read_csv("../data/output/revenue_opportunities.csv")
-    sensitivity = pd.read_csv("../data/output/fare_sensitivity_curves.csv")
+    elasticity  = pd.read_csv(f"{BASE_URL}/elasticity_estimates.csv")
+    revenue     = pd.read_csv(f"{BASE_URL}/revenue_opportunities.csv")
+    sensitivity = pd.read_csv(f"{BASE_URL}/fare_sensitivity_curves.csv")
     return elasticity, revenue, sensitivity
 
 elasticity_df, revenue_df, sensitivity_df = load_data()
