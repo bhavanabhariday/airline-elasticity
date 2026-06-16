@@ -105,7 +105,7 @@ Elasticity = -4.3  →  Do NOT raise fares. You'll lose 43 passengers for every 
 | `data/output/revenue_opportunities.csv` | Route-by-route pricing recommendations | Revenue Managers, Pricing Teams |
 | `data/output/elasticity_estimates.csv` | Price sensitivity score for each route | Analysts, Strategy Teams |
 | `data/output/plots/` | Charts and visualizations | Everyone |
-| `powerbi/dax_measures.md` | Instructions for the Power BI dashboard | BI Analysts |
+| Power BI (web) | Interactive dashboard — see Live Dashboard link above | Revenue Managers, Everyone |
 | `python/` | Data download & processing code | Data Engineers |
 | `r/` | Statistical model code | Data Scientists |
 
