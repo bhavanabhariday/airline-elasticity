@@ -9,6 +9,8 @@
 
 [View the Interactive Power BI Dashboard](https://app.powerbi.com/reportEmbed?reportId=9381f527-c42c-4120-86bd-bbdd0b5264df&autoAuth=true&ctid=a8eec281-aaa3-4dae-ac9b-9a398b9215e7)
 
+[Chat with the AI Pricing Assistant](https://airline-elasticity.streamlit.app/) — Ask questions like "Which routes should I raise fares on?" or "What is the elasticity of HNL-KOA?"
+
 ---
 
 ## What Is This Project, In Plain English?
